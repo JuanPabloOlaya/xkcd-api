@@ -1,5 +1,5 @@
 <h1 align="center">
-  XKCD API
+  XKCD API.
 </h1>
 
 > CORS enabled API for the [XKCD](https://xkcd.com) comic
