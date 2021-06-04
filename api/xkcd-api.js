@@ -10,20 +10,8 @@ const handler = async function(req, res) {
   const comicId = id ? `${id}/` : ''
   const path = `${DOMAIN}${comicId}${PATH}`
   const response = await axios(path)
-  id = response.data.num
-
-  let newResponse
-  if (id >= 1084) {
-    newResponse = {
-      ...response.data,
-      imgRetina: `${response.data.img.replace('.png', '')}_2x.png`,
-    }
-  } else {
-    newResponse = {
-      ...response.data,
-    }
-  }
-  send(res, 200, newResponse)
+  console.log(response);
+  send(res, 200, response.data)
 }
 
 module.exports = cors(handler)
